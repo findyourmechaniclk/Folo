@@ -19,6 +19,7 @@ jobs:
   deploy:
     name: Build & Deploy SSR Worker
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     env:
       VITE_SENTRY_DSN: ${{ vars.VITE_SENTRY_DSN }}
       VITE_FIREBASE_CONFIG: ${{ vars.VITE_FIREBASE_CONFIG }}
